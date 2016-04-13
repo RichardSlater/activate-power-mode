@@ -29,7 +29,7 @@ module.exports = ActivatePowerMode =
 
   subscribeToActiveTextEditor: ->
     @throttledShake = throttle @shake.bind(this), 100, trailing: false
-    @throttledSpawnParticles = throttle @spawnParticles.bind(this), 50, trailing: false
+    @throttledSpawnParticles = throttle @spawnParticles.bind(this), 25, trailing: false
 
     @editor = atom.workspace.getActiveTextEditor()
     return unless @editor
